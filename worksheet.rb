@@ -95,8 +95,8 @@ total_rides.each do |driver_key, driver_array_value|
       elsif subkey == :rating
         driver_array_value.last[:ratings_total] += subvalue.to_f.round(2)
       else ride_hash == driver_array_value.last # if its last, then that means the total is the final total for the driver
-       driver_array_value.last[:rides_total] = (driver_array_value.length - 1)
-      driver_array_value.last[:ratings_avg] = (driver_array_value.last[:ratings_total] / (driver_array_value.last[:rides_total])).round(2)
+        driver_array_value.last[:rides_total] = (driver_array_value.length - 1)
+        driver_array_value.last[:ratings_avg] = (driver_array_value.last[:ratings_total] / (driver_array_value.last[:rides_total])).round(2)
       end
     end
   end
